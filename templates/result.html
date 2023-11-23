@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tags Generation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/result.css') }}">
+</head>
+<body style="background-image: url(./static/bg1.jpg);backdrop-filter:10px;background-repeat:no-repeat;
+ background-size:cover; margin:1% 15%; text-align: center; ">
+ <div class="top">
+  <marquee width="70%" direction="left" >
+      <b style="margin-top:5%;"><i>SCORA</i></b>
+      </marquee> 
+      <img src="./static/scora_logo.jpg" style=" margin-top:0;height:25%;width:19%;text-align: center;float: left;">
+   </div> 
+ <br><br><br>
+  <div id="result">
+    <h1 style="margin-top: 0%;">Assign Tags</h1>
+    <h1> <p id="question"><b> Question : {{ Question }}</b></p></h1><br>
+    <div class="row">
+      <div class="column left" >
+        <h3>Bloom's Taxonomy</h3>
+        <select id="Taxonomy">
+          <option >{{ Predicted_Taxonomy }}</option>
+          <option >Understanding</option>
+          <option >Remembering</option>
+          <option >Analyzing</option>
+      </select>
+      <!--Add option  and Remove options buttons-->
+      <button onclick="addOption('Taxonomy')"><i class="fa-regular fa-square-plus"></i></button>
+      <button onclick="removeOption('Taxonomy')"><i class="fa-regular fa-square-minus"></i></button>
+    </div>
+    <div class="column middle2">
+      <h3>Difficulty</h3>
+      <select id="Difficulty">
+        <option >{{ Predicted_Difficulty }}</option>
+        <option >High</option>
+        <option >Medium</option>
+        <option >Easy</option>
+    </select>
+    <!--Add option  and Remove options buttons-->
+    <button onclick="addOption('Difficulty')" ><i class="fa-regular fa-square-plus"></i></button>
+    <button onclick="removeOption('Difficulty')"><i class="fa-regular fa-square-minus"></i></button>
+  </div>
+  <div class="column middle">
+    <h3>Category</h3>
+    <select id="Category">
+        <option >{{ Predicted_category }}</option>
+        <option >Description</option>
+        <option >Mathematics</option>
+    </select>
+    <!--Add option  and Remove options buttons-->
+    <button onclick="addOption('Category')"><i class="fa-regular fa-square-plus"></i></button>
+    <button onclick="removeOption('Category')"><i class="fa-regular fa-square-minus"></i></button>
+  </div>
+  <div class="column right">
+    <h3>SubCategory</h3>
+    <select id="SubCategory">
+      <option >{{ Predicted_subCategory }}</option>
+      <option >Formula</option>
+  </select>
+  <!--Add option  and Remove options buttons-->
+  <button onclick="addOption('SubCategory')"><i class="fa-regular fa-square-plus"></i></button>
+  <button onclick="removeOption('SubCategory')"><i class="fa-regular fa-square-minus"></i></button>
+  </div>
+    </div>
+    <br><br><br>
+    <div id="Display">
+       <button id="display" onclick="displayValues()">Display Tags</button> 
+    </div>
+    </div>
+    <script src="./static/result.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+  
+  p {
+    margin-bottom: 10px;
+  }
+  button {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin: 0%;
+    padding: 5px;
+  }
+  select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid;
+    border-color: rgb(62, 72, 82);
+    border-radius: 6px;
+    border-width: initial;
+  }
+  
+  input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid;
+    border-color: rgb(62, 72, 82);
+    border-radius: 6px;
+    border-width: initial;
+  }
+  select:hover{
+    border-color: rgb(255, 0, 0);
+  }
+  #Display{
+    text-align: center;
+  }
+  #display {
+  background-color: #8ad991; /* Green */
+  border: none;
+  color: rgb(26, 25, 25);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+}
+#display:hover
+{
+  background-color: darkgreen;
+  color:aliceblue;
+}
+  .column {
+    float: left;
+    }
+
+    /* Set width length for the left, right and middle columns */
+    .left {
+    width: 25%;
+    }
+
+    .middle {
+    width: 25%;
+    }
+    .middle2
+    {
+      width:25%;
+    }
+    .right {
+    width: 25%;
+    }
+
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+    .top{
+            margin-top: 0%;
+            font-size: 50px;
+            text-align: center;
+            color:black;
+          
+        }
